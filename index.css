@@ -256,7 +256,9 @@ hr {
 
 /* Calender / Events */
 iframe {
-  padding: 10px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 /* Resources - sidebar */
@@ -306,10 +308,4 @@ article {
     margin-left: 170px;
     padding: 1em;
     overflow: hidden;
-}
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
 }
