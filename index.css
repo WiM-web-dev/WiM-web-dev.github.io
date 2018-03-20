@@ -1,0 +1,309 @@
+header img,header nav {
+    display:inline-block;
+    vertical-align: middle;
+ }
+.header{
+  height: 140px;
+}
+#logo{
+  height: 135px;
+  width: auto;
+  float: left;
+}
+#mynav {
+    background-color: #f7f7f7;
+    height: 100px;
+    width: 100%;
+    padding: 1em;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    text-align: left;
+    position: absolute;
+}
+#mynav a { /*font color? */
+    color: #636363; /* this is grey */
+    font-size: 20px;
+}
+#mynav button { /*font color? */
+    color: #636363; /* this is grey */
+    font-size: 20px;
+}
+#mynav ul {
+    margin: 10px;
+    padding: 10px;
+     /* Makes sure there are no bullets in a list*/
+     list-style: none;
+}
+#mynav ul li {
+   display: inline-block;
+   margin: 0 0.35em;
+   padding: 0;
+   /* Center the text vertically */
+   vertical-align: middle; 
+}
+#mynav ul li a, .dropbtn {
+   display: inline-block;
+   height: 2.25em;
+   line-height: 2.25em;
+   padding: 0 1.25em;
+   border: 0;
+   border-radius: 8px;
+   box-shadow: inset 0 0 0 1px transparent;
+   text-decoration: none;
+}
+/* Style for menu item links when you hover your cursor over one */
+#mynav ul li a:hover, .dropbtn:hover {
+   background-color: rgba(222, 222, 222, 0.25);
+}
+
+/* ACADEMIC RESOURCES DROP DOWN*/
+.dropbtn {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: inherit;
+    color: #636363;
+}
+.dropbtn:focus {
+    outline: 0; /* remove default highlighted blue border*/
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.mynav a:hover, .dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    overflow: visible;
+}
+.dropdown a:hover {
+  background-color: #ddd
+}
+.show {
+  display:block;
+}
+.dropdown:hover .dropdown-content {
+    display: inline-table;
+}
+arrow {
+  border: solid blue;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down { /* for arrow */
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+{box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1000px;
+  height: 600px;
+  padding-top: 40px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 5px;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 6px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Emailing List */
+/* Full-width input fields */
+input[type=text]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline;
+    border: none;
+    background: #f1f1f1;
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+.form{
+  float: left;
+  display: inline;
+}
+.signupbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.signupbtn:hover {
+    opacity:1;
+}
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Change styles for signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .signupbtn {
+       width: 100%;
+    }
+}
+
+/* About */
+.description.box{
+
+}
+.members.box{
+  vertical-align: middle;
+  width: 100%;
+}
+.members-pics{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* Calender / Events */
+iframe {
+  padding: 10px;
+}
+
+/* Resources - sidebar */
+.sidebar{
+  float: left;
+  background-color: #f7f7f7;
+  max-width: 260px;
+  margin: 5px; 
+  width: 100%;
+}
+.sidebar a { /*font color? */
+    color: #636363; /* this is grey */
+    font-size: 20px;
+}
+.sidebar button { /*font color? */
+    color: #636363; /* this is grey */
+    font-size: 20px;
+}
+.sidebar ul {
+    margin: 10px;
+    padding: 10px;
+     /* Makes sure there are no bullets in a list*/
+    list-style: none; 
+}
+.sidebar ul li {
+   display: inline-block;
+   margin: 0 1.35em;
+   padding: 0;
+   /* Center the text vertically */
+   vertical-align: middle; 
+}
+.sidebar ul li a{
+   display: inline-block;
+   height: 2.25em;
+   line-height: 2.25em;
+   padding: 0 1.25em;
+   border: 0;
+   border-radius: 8px;
+   box-shadow: inset 0 0 0 1px transparent;
+   text-decoration: none;
+}
+/* Style for menu item links when you hover your cursor over one */
+.sidebar ul li a:hover {
+   background-color: rgba(222, 222, 222, 0.25);
+}
+article {
+    margin-left: 170px;
+    padding: 1em;
+    overflow: hidden;
+}
