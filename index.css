@@ -89,10 +89,10 @@ header img,header nav {
     overflow: visible;
 }
 .dropdown a:hover {
-  background-color: #ddd
+    background-color: #ddd
 }
 .show {
-  display:block;
+    display:block;
 }
 .dropdown:hover .dropdown-content {
     display: inline-table;
@@ -256,6 +256,7 @@ hr {
 
 /* Calender / Events */
 iframe {
+  padding-top: 30px;
   position: absolute;
   height: 100%;
   width: 100%;
