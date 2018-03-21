@@ -4,6 +4,7 @@ html, body{
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  overflow: auto;
 }
 header img,header nav {
     display:inline-block;
@@ -247,6 +248,9 @@ hr {
        width: 100%;
     }
 }
+.fb-page{
+  width: 100%;
+}
 
 /* About */
 .description.box {
@@ -262,7 +266,7 @@ hr {
 }
 
 /* Calender / Events */
-iframe {
+.calendar {
   padding-top: 30px;
   position: absolute;
   height: 100%;
