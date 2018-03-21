@@ -10,7 +10,7 @@ header img,header nav {
     vertical-align: middle;
  }
 .header{
-  height: 140px;
+  height: 190px;
 }
 #logo{
   height: 135px;
@@ -19,14 +19,13 @@ header img,header nav {
 }
 #mynav {
     background-color: #f7f7f7;
-    height: 100px;
+    height: 145px;
     width: 100%;
     padding: 1em;
     border-top-left-radius: 0.25em;
     border-top-right-radius: 0.25em;
     text-align: left;
-    position: absolute;
-    overflow-x: hidden;
+    position: relative;
 }
 #mynav a { /*font color? */
     color: #636363; /* this is grey */
@@ -38,9 +37,10 @@ header img,header nav {
 }
 #mynav ul {
     margin: 10px;
-    padding: 10px;
-     /* Makes sure there are no bullets in a list*/
-     list-style: none;
+    padding-left: 300px;
+    padding-top: 40px;
+    /* Makes sure there are no bullets in a list*/
+    list-style: none;
 }
 #mynav ul li {
    display: inline-block;
@@ -249,12 +249,11 @@ hr {
 }
 
 /* About */
-.description.box{
+.description.box {
 
 }
 .members.box{
-  vertical-align: middle;
-  width: 100%;
+ 
 }
 .members-pics{
   height: 200px;
@@ -275,7 +274,7 @@ iframe {
   float: left;
   background-color: #f7f7f7;
   max-width: 260px;
-  margin: 5px; 
+  margin: 15px; 
   width: 100%;
 }
 .sidebar a { /*font color? */
