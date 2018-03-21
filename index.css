@@ -1,3 +1,10 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 header img,header nav {
     display:inline-block;
     vertical-align: middle;
@@ -19,6 +26,7 @@ header img,header nav {
     border-top-right-radius: 0.25em;
     text-align: left;
     position: absolute;
+    overflow-x: hidden;
 }
 #mynav a { /*font color? */
     color: #636363; /* this is grey */
