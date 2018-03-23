@@ -4,8 +4,13 @@ html, body{
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  overflow: auto;
+  max-width: 100%
 }
+
+.everything_besides_header {
+  /*margin: 0 5% 0 5%;*/
+}
+
 header img,header nav {
     display:inline-block;
     vertical-align: middle;
@@ -118,15 +123,28 @@ arrow {
 }
 
 {box-sizing:border-box}
+/*END ACADEMIC RESOURCES DROP DOWN*/
+
 
 /* Slideshow container */
+.item {
+  max-height: 650px;
+  overflow: hidden;}
+
+img.resize{
+  max-width:100%;
+}
+
 .slideshow-container {
-  width: 1000px;
-  height: 600px;
-  padding-top: 40px;
+  width: 73%;
+  height: 50%;
   position: relative;
-  display: inline-block;
-  overflow: hidden;
+  margin: 0% 1% 0% 2%;
+  float: left;
+}
+
+.slide-buttons { /*this is the container for the slide show 'circles'*/
+  text-align: center;
 }
 /* Hide the images by default */
 .mySlides {
@@ -201,7 +219,7 @@ arrow {
   .prev, .next,.text {font-size: 11px}
 }
 
-/* Emailing List */
+/* EMAIL LISTING CONTENT */
 /* Full-width input fields */
 input[type=text]{
     width: 100%;
@@ -215,10 +233,7 @@ hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
 }
-.form{
-  float: left;
-  display: inline;
-}
+
 .signupbtn {
     background-color: #4CAF50;
     color: white;
@@ -233,8 +248,21 @@ hr {
     opacity:1;
 }
 /* Add padding to container elements */
-.container {
-    padding: 16px;
+/*FOR JOIN US CONTAINER*/
+.form{
+  float: left;
+  display: inline;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: thin;
+  /*width: 18.5%;*/
+  max-width: 340px;
+}
+.email-container {
+    padding: 5%;
+}
+input.enter-email{
+  width: 90%
 }
 /* Clear floats */
 .clearfix::after {
@@ -245,12 +273,25 @@ hr {
 /* Change styles for signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .signupbtn {
-       width: 100%;
+       width: 75%;
     }
 }
-.fb-page{
+/*END EMAIL LISTING CONTENTS*/
+
+/*FACEBOOK CONTENTS */
+/*.fb-page{
   width: 100%;
+}*/
+
+iframe.fb-frame {
+  margin: 1% 0% 1% 0%;
+  max-width: 350px;
+  width: 100%;
+  min-height: 305px;
+  height: 100%;
+  float: left;
 }
+/*END FACEBOOK CONTENTS*/
 
 /* About */
 .description.box {
