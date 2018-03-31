@@ -149,12 +149,13 @@ img.resize{
 /* Hide the images by default */
 .mySlides {
     display: none;
+    overflow: hidden;
 }
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: auto;
   margin-top: 5px;
   padding: 15px;
