@@ -162,7 +162,7 @@ function auto_slide() {
         slides[i].style.display = "none"; 
     }
     auto_index++;
-    if (auto_index > slides.length) {slideIndex = 1} 
+    if (auto_index > slides.length) {auto_index = 1} 
     slides[auto_index-1].style.display = "block"; 
     setTimeout(auto_slide, 4000); 
 }    
