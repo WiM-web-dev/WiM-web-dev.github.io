@@ -13,7 +13,7 @@
 			<!-- Nav Bar -->
 			<nav id="mynav">
 				<div id="logo">
-				<a href="index.html"><img align="left" id="logo" alt="logo" src="logo.jpg" alt=""></img></a>
+				<a href="index.html"><img align="left" id="logo" alt="logo" src="logo.jpg" alt=""></a>
 			    </div>
 				<ul>    
                     <li><a href="about.html">About</a></li>
@@ -56,15 +56,15 @@
 		  </div>
 
 		  <!-- Next and previous buttons -->
-		  <a class="prev" onclick="next_slide(-1)">&#10094;</a>
-		  <a class="next" onclick="next_slide(1)">&#10095;</a>
-		  	<!-- The dots/circles for slideshow -->
+		  <a class="prev" onclick="slide_arrow_control(-1)">&#10094;</a>
+		  <a class="next" onclick="slide_arrow_control(1)">&#10095;</a>
+		  	<!-- The dot_control/circles for slideshow -->
 			</div> <!--end item active here-->
 
 			<div class="slide-buttons">
-			  <span class="dot" onclick="current_slide(1)"></span> 
-			  <span class="dot" onclick="current_slide(2)"></span> 
-			  <span class="dot" onclick="current_slide(3)"></span> 
+			  <span class="dot" onclick="slide_dot_control(1)"></span> 
+			  <span class="dot" onclick="slide_dot_control(2)"></span> 
+			  <span class="dot" onclick="slide_dot_control(3)"></span> 
 			</div>
 		</div>
 	
@@ -92,16 +92,13 @@
 
 		<iframe class="fb-frame" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWIMatUCB%2F&tabs=timeline%2C%20events&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="border:none;overflow:hidden" scrolling="no" allowTransparency="true"></iframe>
 
-		<!--<div class="fb-page" data-href="https://www.facebook.com/WIMatUCB/" data-tabs="timeline, events" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/WIMatUCB/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/WIMatUCB/">Women in Mathematics at Berkeley - WIM</a></blockquote></div>-->
-
 </div>
 	
 		
 
-
-    
 <!--Functions for JS will go here -->
-<script>
+<script type="text/javascript" language="javascript">
+
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function drop_down() {
@@ -123,53 +120,64 @@ window.onclick = function(event) {
   }
 }
 
-//-- Slideshow container 
-//CONTROLLED SLIDE SHOW    
-var slide_index = 1;
-show_slides(slide_index);
 
-function current_slide(n) { //control dot buttons
-    show_slides(slide_index = n)
-}
-function next_slide(n) { //Controls previous and next arrow
-    show_slides(slide_index += n)
-}
+//-- SLIDE SHOW CODES 
+var slide_current_index = 0;
+show_slide();
+var slides, dot_control;
 
-function show_slides(n) {
+function show_slide() {
     var i;
-    var dots = document.getElementsByClassName("dot")
-    var slides = document.getElementsByClassName("homepage_slides");
-    if (n > slides.length) {slide_index = 1} //reset slide index if slide_index is too large
-    if (n < 1) {slide_index = slides.length} //reset slide index if n is inapp;
+    //retrieve dot and slide element
+    slides = document.getElementsByClassName("homepage_slides"); 
+    dot_control = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+       slides[i].style.display = "none";  
     }
-    slides[slide_index-1].style.display = "block"; 
-    dots[slide_index-1].className += " active";
-    //setTimeout(show_slides, 4000); 
+    slide_current_index++; //increment index
+    if (slide_current_index> slides.length) {slide_current_index = 1}    
+    for (i = 0; i < dot_control.length; i++) {
+        dot_control[i].className = dot_control[i].className.replace(" active", ""); //remove the active in class
+    }
+    slides[slide_current_index-1].style.display = "block";  
+    dot_control[slide_current_index-1].className += " active";
+    setTimeout(show_slide, 3000); // Change image every 3 seconds
+
 }
 
-//AUTOMATIC SLIDE SHOW    
-var auto_index = 0;
-auto_slide();
-function auto_slide() {
-    var i;
-    var slides = document.getElementsByClassName("homepage_slides");
+function slide_arrow_control(given_index) { //controls arrows when clicked
+    slide_current_index += given_index;
+    if (slide_current_index> slides.length) {slide_current_index = 1}
+    else if(slide_current_index<1){slide_current_index = slides.length}
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
+       slides[i].style.display = "none";  
     }
-    auto_index++;
-    if (auto_index > slides.length) {auto_index = 1} 
-    slides[auto_index-1].style.display = "block"; 
-    setTimeout(auto_slide, 4000); 
-}    
+    for (i = 0; i < dot_control.length; i++) {
+        dot_control[i].className = dot_control[i].className.replace(" active", "");
+    }
+    slides[slide_current_index-1].style.display = "block";  
+    dot_control[slide_current_index-1].className += " active";
+
+}
+
+function slide_dot_control(index) { //controls the dots when clicked
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dot_control.length; i++) {
+        dot_control[i].className = dot_control[i].className.replace(" active", "");
+    }
+    slides[index-1].style.display = "block";  
+    dot_control[index-1].className += " active";
+
+}
+//-- END of SLIDE SHOW CODES 
+     
     
     
-    
- //facebook button
+ //FACEBOOK BUTTON
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -177,7 +185,8 @@ function auto_slide() {
   js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
+    
+    
 </script>    
 
 </body>
