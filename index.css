@@ -44,10 +44,14 @@ ul {
 }
 ul li {
     list-style: none;
+        color: white;
+
     
 }
 .main_nav_bar { /*spaces margin of top and bottom*/
     margin: 20px 0;
+    
+    
 }
 ul li a {
     position: relative;
@@ -55,9 +59,10 @@ ul li a {
     padding: 10px 20px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #262626;
+    color: white;
     font-weight: bold;
     transition: .5s;
+    font-size: 18px;
 }
 ul li a:hover {
     background: #27232B;
@@ -70,6 +75,7 @@ li:hover ul a {
     color: #2f3036;
     height: 40px;
     line-height: 40px;
+    font-size: 12px;
 }
 
 
