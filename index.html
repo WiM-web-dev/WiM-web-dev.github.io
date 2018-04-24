@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scaleable=no"/>
+        <title>menu</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.toggle').click(function(){
+                    $('ul').toggleClass('active');
+                })
+            })</script>
+    </head>
+    <body>
+        <section>
+            <header>
+                <a href="#" class="logo"><img src="wim_no_text.png" style="width:200px" ></a>
+                <h1 class="title">Women in Mathematics at Berkeley</h1>
+
+                <a class="toggle"><img src="nav_bar.png" style="width:30px" ></a>
+                <ul id="navigation_bar" class="active main_nav_bar">
+                    <li class="about"><a href="about.html">About</a></li>
+					<li class="events"><a href="events.html">Events</a></li>
+                    <li class="resources"><a href="#">Resources</a>
+                        <ul class="drop-menu">
+                            <li><a href="helpful-links.html">Helpful Links</a></li>
+                            <li><a href="study-files.html">Study Files</a></li>
+                        </ul>
+                    </li>
+                   <!-- <div class="dropdown">
+                        <li><a onclick="drop_down()" class="dropbtn">Resources <arrow class="down"></arrow></a></li>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="helpful-links.html">Helpful Links</a>
+                            <a href="study-files.html">Study Files</a>
+                      	</div>
+                  	</div>-->
+					<li class="diversity"><a href="diverstiy.html">Diverstiy</a></li>
+					<li class="contact"><a href="contact.html">Contact</a></li>
+				</ul>
+            </header>
+        </section>
+    </body>
+    
+</html>
