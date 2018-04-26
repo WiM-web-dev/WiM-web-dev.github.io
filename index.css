@@ -9,13 +9,17 @@ body{
 h1 { /*fix overflow in opera*/
     overflow-wrap: break-word;
 }
-h1.title {
+p.title {
     color: #e7c26a;
-    font-size: 1.5em;
     margin: .5em 0 0 1em;
     width: 250px;
     position: relative;
     float:left;
+    height: 60px;
+    font-size: 22px;
+    overflow: hidden;
+   /* font-weight: bold; 
+   border: 1px solid black; */
 }
 section {
     position: relative;
@@ -45,13 +49,9 @@ ul {
 ul li {
     list-style: none;
         color: white;
-
-    
 }
 .main_nav_bar { /*spaces margin of top and bottom*/
     margin: 20px 0;
-    
-    
 }
 ul li a {
     position: relative;
