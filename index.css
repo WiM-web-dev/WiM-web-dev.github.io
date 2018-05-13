@@ -177,7 +177,6 @@ ul li a {
         display: block;
         text-align: center;
         color: #ffff;
-        background: rgba(0,0,0,.5);
     }
 }
 
@@ -256,7 +255,6 @@ ul li a {
   position: relative;
 }
 .active, .dot:hover {
-  background-color: #717171;
 }
 /* Fading animation */
 .fade {
@@ -277,7 +275,5 @@ ul li a {
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
-
 
 
