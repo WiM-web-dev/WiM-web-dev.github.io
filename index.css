@@ -157,9 +157,10 @@ ul li a {
 }
 
 @media (max-width: 1260px){
-    ul#navigation_bar.main_nav_bar.active { /*changed screen minimiztation margin for menu*/
+    ul#navigation_bar.main_nav_bar { /*changed screen minimiztation margin for menu*/
         margin-top: 5em; /*distance from header*/
     }
+    
     p.title {
         width: 200px;
         font-size: 1.2em; 
@@ -176,10 +177,12 @@ ul li a {
     header ul {
         width: 100%;
         top: 0;
-        display: none;
+        display: block;
+
     }
     header ul.active {
-        display: block; /*display all buttons when nav bar is clicked*/
+        display: none;  /*display all buttons when nav bar is clicked*/
+
     }
     header ul li a {
         margin: 0;
@@ -195,6 +198,7 @@ ul li a {
         p.title {
         display: none; /*at 450px remove title */
     }
+    
 }
 
 
