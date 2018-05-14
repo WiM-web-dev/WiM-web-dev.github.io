@@ -1,55 +1,72 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-	<head>
-		<title>WiM</title>
-		<meta charset="utf-8" />
-		<meta name="viewport", content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="index.css"/>
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scaleable=no"/>
+    <title>WiM</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.toggle').click(function(){
+                $('ul').toggleClass('active');
+            })
+        })</script>
+</head>
+    
+<body>
+    <section class="container">
+        <!-- header -->
+        <section class="header">
+            <header>
+                <a href="index.html" class="logo"><img src="images/wim_no_text.png" style="width:200px" ></a>
+                <div style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+                    unselectable="on" onselectstart="return false;" onmousedown="return false;"><p class="title">Women in Mathematics at Berkeley</p></div>
 
-	<body>
-		<!-- Header -->
-		<header class="header">
-			<!-- Nav Bar -->
-			<nav id="mynav">
-				<div id="logo">
-				<a href="index.html"><img align="left" id="logo" alt="logo" src="logo.jpg" alt=""></img></a>
-			</div>
-				<ul>    
-                    <li><a href="about.html">About</a></li>
-					<li><a href="events.html">Events</a></li>
-
-                    <div class="dropdown">
+                <a class="toggle"><img src="images/nav_bar.png" style="width:30px" ></a>
+                <ul id="navigation_bar" class="active main_nav_bar">
+                    <li class="about"><a href="about.html">About</a></li>
+                    <li class="events"><a href="events.html">Events</a></li>
+                    <li class="resources"><a href="#">Resources</a>
+                        <ul class="drop-menu">
+                            <li><a href="helpful-links.html">Helpful Links</a></li>
+                            <li><a href="study-files.html">Study Files</a></li>
+                        </ul>
+                    </li>
+                   <!-- <div class="dropdown">
                         <li><a onclick="drop_down()" class="dropbtn">Resources <arrow class="down"></arrow></a></li>
                         <div id="myDropdown" class="dropdown-content">
                             <a href="helpful-links.html">Helpful Links</a>
                             <a href="study-files.html">Study Files</a>
-                      	</div>
-                  	</div>
-               
-					<li><a href="diverstiy.html">Diverstiy</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
+                        </div>
+                    </div>-->
+                    <li class="diversity"><a href="diverstiy.html">Diverstiy</a></li>
+                    <li class="contact"><a href="contact.html">Contact</a></li>
+                </ul>
+            </header>
+        </section>
 
-		<!-- Sidebar -->
-		<nav class="sidebar">
-			<ul>
-				<li><a href="helpful-links.html">Helpful Links</a></li>
-				<li><a href="study-files.html">Study Files</a></li>
-			</ul>
-		</nav>
-
-		<article>
+        <br />
+        <!-- START main_body -->
+        <section class="main_body">
+   		<article>
 			<p>https://www.w3schools.com/html/tryit.asp?filename=tryhtml_layout_float</p>
-		</article>
+		</article>                 
+        </section> 
+        <!-- END main_body -->
 
+        <br />
+        <br />
 
-
-
-
-
-
-	</body>
+        <!-- START footer -->
+        <section class="footer">
+        <footer>
+            <h1>Contact Us</h1>
+            © Copyright 2018 by Women in Mathematics at Berkeley. All Rights Reserved
+        </footer>
+        </section> 
+        <!-- END FOOTER -->
+    </section> <!-- container -->
+</body>
 </html>
