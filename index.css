@@ -11,6 +11,8 @@ body{
 }
 .logo {
     float: left;
+    position: absolute;
+    z-index: 1; /*bring image logo to the front*/
 }
 h1 { /*fix overflow in opera*/
     overflow-wrap: break-word;
@@ -25,8 +27,7 @@ p.title {
     height: 60px;
     font-size: 22px;
     overflow: hidden;
-   /* font-weight: bold; 
-   border: 1px solid black; */ 
+    
 }
 .header {
     position: relative;
@@ -48,6 +49,14 @@ header {
     position: relative;
     padding-bottom: 100%;
 }
+
+/* Calender / Events */
+.calendar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 footer{
     position: relative;
     bottom: 0;

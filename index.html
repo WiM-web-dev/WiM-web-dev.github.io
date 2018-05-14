@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -20,7 +19,7 @@
             <!-- header -->
             <section class="header">
                 <header>
-                    <a href="#" class="logo"><img src="wim_no_text.png" style="width:200px" ></a>
+                    <a href="index.html" class="logo"><img src="images/wim_no_text.png" style="width:200px" alt="WiM-logo"></a>
                     <div style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
                         unselectable="on" onselectstart="return false;" onmousedown="return false;"><p class="title">Women in Mathematics at Berkeley</p></div>
 
@@ -30,8 +29,8 @@
     					<li class="events"><a href="events.html">Events</a></li>
                         <li class="resources"><a href="#">Resources</a>
                             <ul class="drop-menu">
-                                <li><a href="helpful-links.html">Helpful Links</a></li>
-                                <li><a href="study-files.html">Study Files</a></li>
+                            <li><a href="helpful-links.html">Helpful Links</a></li>
+                            <li><a href="study-files.html">Study Files</a></li>
                             </ul>
                         </li>
                        <!-- <div class="dropdown">
@@ -58,17 +57,17 @@
                   <div class="item active"> <!--this div is used to resize all images so height doesnt change 
                     throughout slideshow-->
                   <div class="homepage_slides fade" style="display: none;">
-                    <img src="img1.jpg" style="width:100%">
+                    <img src="images/img1.jpg" style="width:100%">
                     <!--<div class="text">Caption Text</div>-->
                   </div>
 
                   <div class="homepage_slides fade" style="display: none;">
-                    <img src="img2.jpg" style="width:100%">
+                    <img src="images/img2.jpg" style="width:100%">
                     <!--<div class="text">Caption Two</div>-->
                   </div>
 
                   <div class="homepage_slides fade" style="display: none;"> 
-                    <img src="img3.jpg" style="width:100%">
+                    <img src="images/img3.jpg" style="width:100%">
                     <!--<div class="text">Caption Three</div>-->
                   </div>
 
@@ -85,60 +84,6 @@
                       <span class="dot" onclick="slide_dot_control(3)"></span> 
                     </div>
                 </div>
-                <script type="text/javascript" language="javascript">
-                    var slide_current_index = 0;
-                    show_slide();
-                    var slides, dot_control;
-
-                    function show_slide() {
-                        var i;
-                        //retrieve dot and slide element
-                        slides = document.getElementsByClassName("homepage_slides"); 
-                        dot_control = document.getElementsByClassName("dot");
-                        for (i = 0; i < slides.length; i++) {
-                           slides[i].style.display = "none";  
-                        }
-                        slide_current_index++; //increment index
-                        if (slide_current_index> slides.length) {slide_current_index = 1}    
-                        for (i = 0; i < dot_control.length; i++) {
-                            dot_control[i].className = dot_control[i].className.replace(" active", ""); //remove the active in class
-                        }
-                        slides[slide_current_index-1].style.display = "block";  
-                        dot_control[slide_current_index-1].className += " active";
-                        setTimeout(show_slide, 3000); // Change image every 3 seconds
-
-                    }
-
-                    function slide_arrow_control(given_index) { //controls arrows when clicked
-                        slide_current_index += given_index;
-                        if (slide_current_index> slides.length) {slide_current_index = 1}
-                        else if(slide_current_index<1){slide_current_index = slides.length}
-                        for (i = 0; i < slides.length; i++) {
-                           slides[i].style.display = "none";  
-                        }
-                        for (i = 0; i < dot_control.length; i++) {
-                            dot_control[i].className = dot_control[i].className.replace(" active", "");
-                        }
-                        slides[slide_current_index-1].style.display = "block";  
-                        dot_control[slide_current_index-1].className += " active";
-
-                    }
-
-                    function slide_dot_control(index) { //controls the dots when clicked
-                        if (index> slides.length) {index = 1}
-                        else if(index<1){index = slides.length}
-                        for (i = 0; i < slides.length; i++) {
-                           slides[i].style.display = "none";  
-                        }
-                        for (i = 0; i < dot_control.length; i++) {
-                            dot_control[i].className = dot_control[i].className.replace(" active", "");
-                        }
-                        slides[index-1].style.display = "block";  
-                        dot_control[index-1].className += " active";
-
-                    }
-                </script>
-
                 <!-- About -->
                 <div id="about">
                     <p>About Us</p>
@@ -146,20 +91,71 @@
 
             </section> <!-- main_body -->
 
-            <br />
-            <br />
-
             <!-- footer -->
             <section class="footer">
                 <footer>
                     <h1>Contact Us</h1>
-                    © Copyright 2018 by Women in Mathematics at Berkeley. All Rights Reserved)
-
+                    © Copyright 2018 by Women in Mathematics at Berkeley. All Rights Reserved
 
                 </footer>
             </section>
 
         </section> <!-- container -->
-    </body>
-    
+
+<script type="text/javascript" language="javascript">
+    var slide_current_index = 0;
+    show_slide();
+    var slides, dot_control;
+
+    function show_slide() {
+        var i;
+        //retrieve dot and slide element
+        slides = document.getElementsByClassName("homepage_slides"); 
+        dot_control = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        slide_current_index++; //increment index
+        if (slide_current_index> slides.length) {slide_current_index = 1}    
+        for (i = 0; i < dot_control.length; i++) {
+            dot_control[i].className = dot_control[i].className.replace(" active", ""); //remove the active in class
+        }
+        slides[slide_current_index-1].style.display = "block";  
+        dot_control[slide_current_index-1].className += " active";
+        setTimeout(show_slide, 3000); // Change image every 3 seconds
+
+    }
+
+    function slide_arrow_control(given_index) { //controls arrows when clicked
+        slide_current_index += given_index;
+        if (slide_current_index> slides.length) {slide_current_index = 1}
+        else if(slide_current_index<1){slide_current_index = slides.length}
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dot_control.length; i++) {
+            dot_control[i].className = dot_control[i].className.replace(" active", "");
+        }
+        slides[slide_current_index-1].style.display = "block";  
+        dot_control[slide_current_index-1].className += " active";
+
+    }
+
+    function slide_dot_control(index) { //controls the dots when clicked
+        if (index> slides.length) {index = 1}
+        else if(index<1){index = slides.length}
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dot_control.length; i++) {
+            dot_control[i].className = dot_control[i].className.replace(" active", "");
+        }
+        slides[index-1].style.display = "block";  
+        dot_control[index-1].className += " active";
+
+    }
+</script>
+
+        
+</body>    
 </html>
