@@ -151,10 +151,10 @@ ul li a {
     ul#navigation_bar.main_nav_bar.active { /*changed screen minimiztation margin for menu*/
         margin: -4px 0 0 0;
     }
-    h1.title {
+    p.title {
         width: 200px;
         font-size: 1.2em; 
-        margin: 1em 0 0 1em ;
+        margin: 1em 0 0 2em ;
 
     }
     .toggle {
@@ -177,11 +177,13 @@ ul li a {
         display: block;
         text-align: center;
         color: #ffff;
+        background: rgba(0,0,0,.7);
+
     }
 }
 
 @media (max-width:450px){
-        h1.title {
+        p.title {
         display: none; /*at 450px remove title */
     }
 }
