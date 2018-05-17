@@ -1,14 +1,15 @@
 /** INDEX CSS **/
 
 /************************* MAIN STRUCTURE OF PAGE ***********************************/
-
+html{
+    height: ;
+}
 body{
     margin: 0;
     padding: 0;
     position: relative;
-    height: 100%;
     overflow-x: hidden;
-    background-color: #516982;
+    background-color: white;
 }
 
 .container{     /* CONTAINS ALL OF BODY'S TAGS */
@@ -33,19 +34,26 @@ header {
     position: relative;
     width: 100%;
     height: 100%;
-    padding-bottom: 60px; /* used for footer's height */
+    padding-bottom:; /* used for footer's height */
 }
-
+.footer{
+    position: relative;
+    bottom:0;
+    height: ;
+}
 footer {
     text-align: center;
-    position:absolute;
     padding: 0.75em;
     bottom:0;
     width:100%;
-    height: 60px;   
+    height: auto;   
     background: #516982;
     color: white;
     
+}
+
+footer table tr td {
+    text-align: center
 }
 
 .logo {
@@ -80,7 +88,7 @@ p.title {
     
 }
 div.text {
-    background-color: #516982;
+    background-color: white;
 
 }
 .text {
@@ -90,8 +98,8 @@ div.text {
 }
 
 p.text {
-    background-color: #516982;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 18px;
 
 }
@@ -241,6 +249,9 @@ ul li a {
     }
     a.next, a.prev { 
         display: none;
+    }
+    .main_body {
+        height: 30em;
     }
 }
 
