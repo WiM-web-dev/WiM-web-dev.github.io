@@ -5,14 +5,20 @@
     <title>WiM</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scaleable=no"/>
-
+    
+    <!-- METADATA -->
     <meta property="og:image" content="images/wim_no_text.png">
     <meta property="og:description" content="Women in Mathematics at Berkeley (WIM) is an organization that serves to foster a community and provide a network amongst the undergraduate women in mathematics at Cal. WIMMERS hope to establish a long-lasting relationship with other Berkeley undergraduates, graduate students, and professors, while finding unity in their common love of math.">
     <meta property="og:title" content="Women in Mathematics at Berkeley">
+    
+    <!-- CSS FILES -->
+    <link rel="stylesheet" type="text/css" href="css_files/index.css">
+    <link rel="stylesheet" type="text/css" href="css_files/slideshow.css">
+    <link rel="stylesheet" type="text/css" href="css_files/calendar.css">
+    
+    <!-- FAVICON [NOTE: REPLACE WHEN GIVEN 32X32 IMG] -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/wim_no_text.png" />
 
-    <link rel="stylesheet" type="text/css" href="index.css">
-
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -48,34 +54,34 @@
                             <a href="study-files.html">Study Files</a>
                         </div>
                     </div>-->
-                    <li class="diversity"><a href="diverstiy.html">Diverstiy</a></li>
+                    <li class="diversity"><a href="diversity.html">Diversity</a></li>
                     <li class="contact"><a href="contact.html">Contact</a></li>
                 </ul>
             </header>
         </section>
 
-        <br />
         <!-- main body -->
         <section class="main_body">
-
+            
             <!-- Slideshow -->
+            <!-- note: slideshow images should be 1600x900px -->
             <div class="slideshow-container">
 
               <!-- Full-width images with number and caption text -->
               <div class="item active"> <!--this div is used to resize all images so height doesnt change 
                 throughout slideshow-->
-              <div class="homepage_slides fade" style="display: none;">
-                <img src="images/img1.jpg" style="width:100%">
+              <div class="slide_images fade">
+                <img src="images/dog1.png">
                 <!--<div class="text">Caption Text</div>-->
               </div>
 
-              <div class="homepage_slides fade" style="display: none;">
-                <img src="images/img2.jpg" style="width:100%">
+              <div class="slide_images fade">
+                <img src="images/dog2.png">
                 <!--<div class="text">Caption Two</div>-->
               </div>
 
-              <div class="homepage_slides fade" style="display: none;"> 
-                <img src="images/img3.jpg" style="width:100%">
+              <div class="slide_images fade"> 
+                <img src="images/dog3.jpg">
                 <!--<div class="text">Caption Three</div>-->
               </div>
 
@@ -92,22 +98,30 @@
                   <span class="dot" onclick="slide_dot_control(3)"></span> 
                 </div>
             </div>
-
-        </section> <!-- main_body -->
+            <div class="text">
+            <p class="text">Women in Mathematics at Berkeley (WIM) is an organization that serves to foster a community and provide a network amongst the undergraduate women in mathematics at Cal. WIMMERS hope to establish a long-lasting relationship with other Berkeley undergraduates, graduate students, and professors, while finding unity in their common love of math.
+            <br /><br />
+            We have weekly meetings on Mondays from 6-8 P.M. in 1015 Evans, with activities ranging from study hours to talks from graduate students to game nights. We also do field trips to the Exploratorium in San Francisco and other math-related activities outside of our Monday meetings. Check out our events page and calendar for updates!
+            <br /><br />
+            Founded in February 2014 by Katrina Passarella and Meaghan McConlogue, WIM is still a fairly new student organization but has grown and accomplished a remarkable amount within the last year. Check out our pages to see what we’re all about!
+            </p>
+            </div>
+        </section> 
+        <!-- END main_body -->
 
         <!-- footer -->
         <section class="footer">
             <footer>
-                <h1>Contact Us</h1>
-                <p>© Copyright 2018 by Women in Mathematics at Berkeley. All Rights Reserved</p>
-
+                <hr> <!--adds seperation line-->
+                <p>
+                Copyright © 2018 Women in Mathematics at Berkeley.<br />
+                All Rights Reserved.</p>
             </footer>
         </section>
-
-    </section> <!-- container -->
+    </section> <!-- END container -->
 
         
-<!-- Scripts -->
+<!-- SCRIPTS -->
 <script src="scripts/slideshow-functionality.js"></script>
 </body>    
 </html>
