@@ -5,7 +5,7 @@ var slides, dot_control;
 function show_slide() {
     var i;
     //retrieve dot and slide element
-    slides = document.getElementsByClassName("homepage_slides"); 
+    slides = document.getElementsByClassName("slide_images"); 
     dot_control = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {
        slides[i].style.display = "none";  
