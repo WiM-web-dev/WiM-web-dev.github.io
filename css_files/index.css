@@ -9,7 +9,7 @@ body{
     background-color: white;
 }
 
-.container{     /* CONTAINS ALL OF BODY'S TAGS */
+#container{     /* CONTAINS ALL OF BODY'S TAGS */
     position: relative;
     min-height: 100%;
     height: 100%;
@@ -26,14 +26,14 @@ header {
     transition: .5s;
 }
 
-.main_body{
+#main_body{
     padding-top: 80px;
     position: relative;
     width: 100%;
     height: 100%;
     padding-bottom:; /* used for footer's height */
 }
-.footer{
+#footer{
     position: relative;
     bottom:0;
     height: ;
@@ -59,7 +59,7 @@ footer table tr td {
     z-index: 1; /*bring image logo to the front*/
 }
 
-.header {
+#header {
     position: fixed;
     width: 100%;
     height: auto;
@@ -247,7 +247,7 @@ ul li a {
     a.next, a.prev { 
         display: none;
     }
-    .main_body {
+    #main_body {
         height: 30em;
         overflow: scroll;
         overflow-x: hidden;
