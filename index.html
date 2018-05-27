@@ -16,12 +16,15 @@
     <link rel="stylesheet" type="text/css" href="css_files/slideshow.css">
     <link rel="stylesheet" type="text/css" href="css_files/calendar.css">
     
+    <!--- HAMBURGER BUTTON -->
+    <link href="hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="images/wim_favicon.ico" />
-
+    
+    <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="text/javascript">
-        
         $(document).ready(function() {
             $('.toggle').click(function(){
                 $('ul').toggleClass('active');
@@ -35,11 +38,18 @@
         <!-- header -->
         <section id="header">
             <header>
-                <a href="index.html" class="logo"><img src="images/wim_no_text.png" style="width:200px" alt="WiM-logo"></a>
+                <a href="index.html" class="logo"><img class="logo" src="images/wim_no_text.png" alt="WiM-logo"></a>
                 <div style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
-                    unselectable="on" onselectstart="return false;" onmousedown="return false;"><p class="title">Women in Mathematics <br />at Berkeley</p></div>
-
-                <a class="toggle"><img src="images/nav_bar.png" style="width:30px" ></a>
+                unselectable="on" onselectstart="return false;" onmousedown="return false;"><p class="title">Women in Mathematics <br />at Berkeley</p></div>
+                
+                <div class="toggle">
+                <button class="hamburger hamburger--spring" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+                </div>
+                
                 <ul id="navigation_bar" class="active main_nav_bar">
                     <li class="about"><a href="about.html">About</a></li>
                     <li class="events"><a href="events.html">Events</a></li>
@@ -49,13 +59,6 @@
                         <li><a href="study-files.html">Study Files</a></li>
                         </ul>
                     </li>
-                   <!-- <div class="dropdown">
-                        <li><a onclick="drop_down()" class="dropbtn">Resources <arrow class="down"></arrow></a></li>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="helpful-links.html">Helpful Links</a>
-                            <a href="study-files.html">Study Files</a>
-                        </div>
-                    </div>-->
                     <li class="diversity"><a href="diversity.html">Diversity</a></li>
                     <li class="contact"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -126,10 +129,8 @@
                 </table>
             </footer>
     </section> <!-- END container -->
+<script src="scripts/slideshow-functionality.js"></script>
+<script src="scripts/hamburger_button.js"></script>
 
-        
-<!-- SCRIPTS -->
-<script src="scripts/slideshow-functionality.js">
-</script>
 </body>    
 </html>
