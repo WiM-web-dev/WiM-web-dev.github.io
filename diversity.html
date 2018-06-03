@@ -24,12 +24,7 @@
     
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.toggle').click(function(){
-                $('ul').toggleClass('active');
-            });     
-        });
+    <script type="text/javascript" src="scripts/navigation_bar.js">
     </script>
 </head>
     
@@ -38,7 +33,7 @@
         <!-- header -->
         <section id="header">
             <header>
-                <a href="index.html" class="logo"><img class="logo" src="images/wim_no_text.png" alt="WiM-logo"></a>
+                <a href="index.html" class="logo"><img id="logo" src="images/wim_no_text.png" alt="WiM-logo"></a>
                 <div style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
                 unselectable="on" onselectstart="return false;" onmousedown="return false;"><p class="title">Women in Mathematics <br />at Berkeley</p></div>
                 
