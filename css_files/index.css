@@ -237,6 +237,11 @@ button.hamburger {
         margin: 1em 0 0 2em ;
 
     }
+    body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
     .toggle {
         display: block;
     }
@@ -270,7 +275,6 @@ button.hamburger {
     }
     #main_body {
         height: 30em;
-        overflow: scroll;
         overflow-x: hidden;
     }
     .calendar {
