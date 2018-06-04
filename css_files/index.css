@@ -8,6 +8,7 @@ body {
     position: relative;
     overflow-x: hidden;
     background-color: white;
+    height: 100%;
 }
 
 #container {     /* CONTAINS ALL OF BODY'S TAGS */
@@ -237,11 +238,6 @@ button.hamburger {
         margin: 1em 0 0 2em ;
 
     }
-    body {
-        height: 100%;
-        width: 100%;
-        overflow-x: hidden;
-    }
     .toggle {
         display: block;
     }
@@ -274,7 +270,7 @@ button.hamburger {
         display: none;
     }
     #main_body {
-        height: 30em;
+        min-height: 30em;
         overflow-x: hidden;
     }
     .calendar {
