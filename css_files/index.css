@@ -1,7 +1,8 @@
 /** INDEX CSS **/
 
 /************************* MAIN STRUCTURE OF PAGE ***********************************/
-body{
+
+body {
     margin: 0;
     padding: 0;
     position: relative;
@@ -219,12 +220,14 @@ ul li a:hover + .drop-menu, .drop-menu:hover {
 
 button.hamburger {
     outline: none;
+    margin-right: -1em;
+    transition: .30s ease-in;
 }
 
 /************* STRUCTURES NAV BAR WHEN UNDER SPECIFIC WIDTH ***********************/
 
 @media (max-width: 1250px){
-    ul#navigation_bar.main_nav_bar { /*changed screen minimiztation margin for menu*/
+    ul#navigation_bar { /*changed screen minimiztation margin for menu*/
         margin-top: 5em; /*distance from header*/
     }
     
@@ -239,7 +242,7 @@ button.hamburger {
     }
     header {
         padding: 0 0;
-        background: #516982;   
+        background: #516982; 
     }
     header ul {
         width: 100%;
