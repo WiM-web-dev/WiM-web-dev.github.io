@@ -1,6 +1,9 @@
 /**ANIMATE HEADER**/
 
  $(document).ready(function() { 
+   console.log($('ul li a').css('padding'));
+   console.log($('ul li a').css('margin'));
+
      var scroll_height = $(window).scrollTop();
      var window_width = $(window).width();
      
@@ -19,8 +22,9 @@
     });
      
     function animate_header() {
+
         if (scroll_height > 80){ /*scroll down*/ 
-            if (window_width > 1250) {
+            if (window_width > 1200) {
                 $('ul#navigation_bar').css('margin-top', '');
             }
             else {
@@ -34,6 +38,8 @@
             $("img#logo").css('width' , '126px');
             $("p.title").css('font-size', '17px'); 
             $("ul li a").css('padding', '4.7px 20px');
+            $("li ul li a").css('padding', '0 25px');
+
         }
         else { /*scroll up*/ 
             if (window_width > 1250 ) {
@@ -49,6 +55,7 @@
             $("p.title").css('font-size', '22px'); 
             $('p.title').html('Women in Mathematics <br / >at Berkeley');
             $("ul li a").css('padding', '10px 20px');
+            $("li ul li a").css('padding', '0 25px');
         
         }
     }
